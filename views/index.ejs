@@ -4,17 +4,19 @@
         <link rel="stylesheet" href="/style.css">
     </head>
     <body>
-        <% messages.forEach((user)=>{%>
-            <%- include("user", {user: user.user, date: user.added})%>
-        <%})%>
-        <br>
-        <form method="POST" action="/new">
-            <label for="text">Text Message:</label>
-            <input type="text" id="text" name="text"><br><br>
-            <label for="user">First name:</label>
-            <input type="text" id="user" name="user"><br><br>
-            <input type="submit" value="Submit">
-         </form>
-
+        <div class="childcontainer">
+            <% messages.forEach((user)=>{%>
+                <%- include("user", {user: user.user, date: user.added})%>
+            <%})%>
+            <br>
+            <form method="POST" action="/new">
+                <label for="text">Text Message:</label>
+                <input type="text" id="text" name="text"><br><br>
+                <label for="user">First name:</label>
+                <input type="text" id="user" name="user"><br><br>
+                <input type="submit" value="Submit">
+             </form>
+    
+        </div>
     </body>
 </html>
